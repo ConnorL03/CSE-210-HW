@@ -35,7 +35,7 @@ class Program
             letter = "F";
         }
         
-        Console.WriteLine($"Congrats you have a {letter} in the class");
+        Console.WriteLine($"You have a {letter} in the class");
 
         if (grade_num >= 70)
         {
