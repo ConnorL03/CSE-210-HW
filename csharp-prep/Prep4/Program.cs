@@ -9,6 +9,7 @@ class Program
         
         List <int> numbers = new List<int> ();
         int number = 1;
+        Console.WriteLine("Enter a list of numbers, type 0 when finished.");
         do
         {
             Console.Write("Enter a number: ");
