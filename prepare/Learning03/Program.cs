@@ -32,7 +32,7 @@ class Program
             f5.SetTop(topValue);
             f5.SetBottom(bottomValue);
             Console.Write($"Fraction {i + 1}: ");
-            Console.Write($"string: {f5.GetFractionString()}");
+            Console.Write($"String: {f5.GetFractionString()}");
             Console.WriteLine($" Number: {f5.GetDecimalValue()}");
         }
 
