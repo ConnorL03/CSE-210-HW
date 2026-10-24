@@ -9,15 +9,16 @@ class Program
 
         Scripture _scripture = null;
 
-        // Exciding 
+        // Exciding requirerments
         
-       int choice;
+       
        Console.WriteLine("Which scripture do you want to memorize?");
        Console.WriteLine("Type '1' for Proverbs 3: 5-6");
        Console.WriteLine("Type '2' for 3 Nephi 5: 13");
        Console.WriteLine("Type '3' for Alma 7: 13-14");
+       Console.WriteLine("Type '4' to enter your own scripture! ");
        Console.Write("Type choise here: ");
-       choice = int.Parse(Console.ReadLine());
+       int choice = int.Parse(Console.ReadLine());
 
 
        if (choice == 1)
@@ -50,6 +51,40 @@ class Program
 
         _scripture = new Scripture(scriptureText, chapter, book, start);
         }
+
+        if (choice == 4)
+        {
+            Console.Write("Enter the book of your scripture: ");
+            string book = Console.ReadLine();
+
+            Console.Write("Enter the chapter: ");
+            int chapter = int.Parse(Console.ReadLine());
+
+            Console.Write("Does your scripture only have one verse? ");
+            string oneVerse = Console.ReadLine();
+
+            if (oneVerse == "yes")
+            {
+                Console.Write("What is your verse number? ");
+                int start = int.Parse(Console.ReadLine());
+
+                Console.Write("Type out your verse here: ");
+                string scriptureText = Console.ReadLine();
+                _scripture = new Scripture(scriptureText, chapter, book, start);
+            }
+            else if (oneVerse == "no")
+            {
+                Console.Write("What is the number of your first verse? ");
+                int start = int.Parse(Console.ReadLine());
+
+                Console.Write("What is the number of your last verse? ");
+                int end = int.Parse(Console.ReadLine());
+
+                Console.Write("Type out your verse here (you can use verse numbers): ");
+                string scriptureText = Console.ReadLine();
+                _scripture = new Scripture(scriptureText, chapter, book, start, end);
+            }
+        }
         
 
         Console.Clear();
@@ -63,6 +98,7 @@ class Program
             _scripture.GetRenderedText();
 
             // here we check condition 1
+            Console.WriteLine();
             Console.Write("Press enter to continue or type 'quit' to finish: ");
             keyWord1 = Console.ReadLine();
 

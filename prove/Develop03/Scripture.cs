@@ -33,6 +33,7 @@ public class Scripture
     public void GetRenderedText()
     {
         _reference.DisplayReference();
+        Console.WriteLine();
 
         for (int i = 0; i < _word.Count; i++)
         {
