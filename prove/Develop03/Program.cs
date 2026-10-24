@@ -11,16 +11,16 @@ class Program
 
         // Exciding 
         
-       int choise;
+       int choice;
        Console.WriteLine("Which scripture do you want to memorize?");
        Console.WriteLine("Type '1' for Proverbs 3: 5-6");
        Console.WriteLine("Type '2' for 3 Nephi 5: 13");
        Console.WriteLine("Type '3' for Alma 7: 13-14");
        Console.Write("Type choise here: ");
-       choise = int.Parse(Console.ReadLine());
+       choice = int.Parse(Console.ReadLine());
 
 
-       if (choise == 1)
+       if (choice == 1)
         {
         int chapter = 3;
         string book = "Proverbs";
@@ -31,7 +31,7 @@ class Program
         _scripture = new Scripture(scriptureText, chapter, book, start, end);
         }
 
-        if (choise == 2)
+        if (choice == 2)
         {
         int chapter = 5;
         string book = "3 Nephi";
@@ -41,7 +41,7 @@ class Program
         _scripture = new Scripture(scriptureText, chapter, book, start);
         }
 
-        if (choise == 3)
+        if (choice == 3)
         {
         int chapter = 7;
         string book = "Alma";
