@@ -6,8 +6,6 @@ public class Entry
 
     public string _promptGiven = "";
 
-    public List<Entry> _journalEntries = new List<Entry>();
-
 
     public string GetPrompt()
     {

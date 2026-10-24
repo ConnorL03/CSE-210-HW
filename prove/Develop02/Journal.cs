@@ -4,6 +4,8 @@ public class Journal
 {
     Entry entry = new Entry();
 
+    public List<Entry> _journalEntries = new List<Entry>();
+
     public void AddEntry()
     {
         string prompt = entry.GetPrompt();
@@ -19,7 +21,7 @@ public class Journal
         entry._promptGiven = prompt;
         entry._dateOfEntry = dateText;
 
-        entry._journalEntries.Add(entry);
+        _journalEntries.Add(entry);
     }
 
     public void Display()
@@ -27,7 +29,7 @@ public class Journal
         Console.WriteLine();
         Console.WriteLine("Here are your journal entiries: ");
         Console.WriteLine(">");
-        foreach (Entry journalEntry in entry._journalEntries)
+        foreach (Entry journalEntry in _journalEntries)
         {
             
             Console.WriteLine($"Date: {journalEntry._dateOfEntry} - Prompt: {journalEntry._promptGiven}");
@@ -42,7 +44,7 @@ public class Journal
         
         using (StreamWriter outputFile = new StreamWriter(fileName))
         {
-            foreach(Entry entry in entry._journalEntries)
+            foreach(Entry entry in _journalEntries)
             {
                 outputFile.WriteLine($"{entry._dateOfEntry} ~|~ {entry._promptGiven} ~|~ {entry._journalEntry}");
             }
@@ -69,7 +71,7 @@ public class Journal
             newEntry._promptGiven = parts[1];
             newEntry._journalEntry = parts[2];
 
-            entry._journalEntries.Add(newEntry);
+            _journalEntries.Add(newEntry);
         }
 
     }    
