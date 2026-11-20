@@ -1,0 +1,4 @@
+10
+SimpleGoal,poop,go poop today,10,False
+EternalGoal,read my scriptures,Read once a day,20
+ChecklistGoal,do pushups,do three sets of pushups,20,100,3,0

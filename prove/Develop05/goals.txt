@@ -1,0 +1,2 @@
+160
+ChecklistGoal,do pushups,do 3 sets of pushups,20,100,3,3
